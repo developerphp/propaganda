@@ -9,9 +9,9 @@
     <div class="item"><a href="<?php echo base_url($this->lang->line('lang').'projects') ?>">İŞLER</a></div>
     <div class="item"><a href="<?php echo base_url($this->lang->line('lang').'contact') ?>">İLETİŞİM</a></div>
     <div class="social">
-    	<a href=""><img src="<?php echo base_url() ?>assets/img/social/menu1.png"></a>
-    	<a href=""><img src="<?php echo base_url() ?>assets/img/social/menu2.png"></a>
-    	<a href=""><img src="<?php echo base_url() ?>assets/img/social/menu3.png"></a>
+    	<a target="_blank" href=""><img src="<?php echo base_url() ?>assets/img/social/menu1.png"></a>
+    	<a target="_blank" href=""><img src="<?php echo base_url() ?>assets/img/social/menu2.png"></a>
+    	<a target="_blank" href="https://vimeo.com/user41227067"><img src="<?php echo base_url() ?>assets/img/social/menu3.png"></a>
     </div>
     <div class="copyright">@2015 PROPAGANDA</div>
 </div>

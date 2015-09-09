@@ -54,7 +54,7 @@
                 <div class="bg" style="background-image: url(<?php echo base_url('uploads/'.$news->image) ?>);"></div>
                 <div class="desc <?php if ($i%2<>0) { echo 'wh_back'; } else { echo 'dg_back'; } ?>">
                     <div class="txt<?php if ($i%2==0) { echo ' darkGrey_txt'; } ?>">
-                        <span><?php echo $news->title ?></span>
+                        <span class="pink_txt title_color"><?php echo $news->title ?></span>
                         <span><?php echo $news->subtitle ?></span>
                     </div>
                 </div>

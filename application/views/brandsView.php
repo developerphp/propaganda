@@ -10,7 +10,7 @@
     <div class="fixed_bottom"></div>
     
     <div class="fixed_box">
-        <div class="bg" style="background-image: url(<?php echo base_url();?>assets/img/team_cover.jpg">
+        <div class="bg" style="background-image: url(<?php echo base_url();?>assets/img/brands_cover.jpg">
         </div>
     </div>
     
