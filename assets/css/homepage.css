@@ -1,0 +1,29 @@
+@media screen and (max-height: 1000px){
+  body{
+    height: 130%;
+  }
+}
+
+@media screen and (max-height: 700px){
+  body{
+    height: 150%;
+  }
+}
+
+@media screen and (max-height: 600px){
+  body{
+    height: 180%;
+  }
+}
+
+@media screen and (max-height: 500px){
+  body{
+    height: 210%;
+  }
+}
+
+@media screen and (max-height: 400px){
+  body{
+    height: 240%;
+  }
+}
