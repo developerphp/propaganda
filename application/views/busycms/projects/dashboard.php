@@ -101,7 +101,7 @@
                         <form id="scheduleform" name="scheduleform" onsubmit="return false;">
                             <ul class="project">
                                 <?php 
-                                $sql=$this->db->query("select * from projects order by reorder asc");
+                                $sql=$this->db->query("select * from projects order by reorder desc");
                                 foreach($sql->result() as $project) { ?>
                                <li id="project_<?php echo $project->id ?>" class="<?php if ($project->publish==1) { echo "publish"; } else { echo "unpublish"; } ?>">
                                    <div class="image">

@@ -59,7 +59,7 @@
             $sql=$this->db->query("select 
                 projects.title,projects.id,projects.image,projects.project_year,projects.publish,projects.reorder,projects.subbrand,
                 customers.id as cid,customers.title as customer_name,customers.image_gray
-             from projects,customers where customers.id=projects.customer and projects.publish=1 and projects.reorder<".$project["reorder"]." order by projects.reorder desc limit 0,1");
+             from projects,customers where customers.id=projects.customer and projects.publish=1 and projects.reorder>".$project["reorder"]." order by projects.reorder asc limit 0,1");
             foreach($sql->result() as $p) {
             ?>
             <a href="<?php echo base_url($this->lang->line('lang').'projects/detail/'.$p->id) ?>">
@@ -78,7 +78,7 @@
                 $sql=$this->db->query("select 
                     projects.title,projects.id,projects.image,projects.project_year,projects.publish,projects.reorder,projects.subbrand,
                     customers.id as cid,customers.title as customer_name,customers.image_gray
-                 from projects,customers where customers.id=projects.customer and projects.publish=1 order by projects.reorder desc limit 0,1");
+                 from projects,customers where customers.id=projects.customer and projects.publish=1 order by projects.reorder asc limit 0,1");
                 foreach($sql->result() as $p) {
                 ?>
                 <a href="<?php echo base_url($this->lang->line('lang').'projects/detail/'.$p->id) ?>">
@@ -101,7 +101,7 @@
             $sql=$this->db->query("select 
                 projects.title,projects.id,projects.image,projects.project_year,projects.publish,projects.reorder,projects.subbrand,
                 customers.id as cid,customers.title as customer_name,customers.image_gray
-             from projects,customers where customers.id=projects.customer and projects.publish=1 and projects.reorder>".$project["reorder"]." order by projects.reorder asc limit 0,1");
+             from projects,customers where customers.id=projects.customer and projects.publish=1 and projects.reorder<".$project["reorder"]." order by projects.reorder desc limit 0,1");
             foreach($sql->result() as $p) {
             ?>
             <a href="<?php echo base_url($this->lang->line('lang').'projects/detail/'.$p->id) ?>">
@@ -121,7 +121,7 @@
                 $sql=$this->db->query("select 
                     projects.title,projects.id,projects.image,projects.project_year,projects.publish,projects.reorder,projects.subbrand,
                     customers.id as cid,customers.title as customer_name,customers.image_gray
-                 from projects,customers where customers.id=projects.customer and projects.publish=1 order by projects.reorder asc limit 0,1");
+                 from projects,customers where customers.id=projects.customer and projects.publish=1 order by projects.reorder desc limit 0,1");
                 foreach($sql->result() as $p) {
                 ?>
                 <a href="<?php echo base_url($this->lang->line('lang').'projects/detail/'.$p->id) ?>">

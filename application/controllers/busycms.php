@@ -4432,12 +4432,14 @@ class Busycms extends CI_Controller {
         $action = $this->input->post('action');
         $updateRecordsArray = $this->input->post('project');
 
+        $sql=$this->db->query("select * from projects");
+
         if ($action == "updateRecordsListings") {
             $listingCounter = 1;
             foreach ($updateRecordsArray as $recordIDValue) {
                 $query = "UPDATE projects SET reorder = " . $listingCounter . " WHERE id = " . $recordIDValue;
                 mysql_query($query) or die('Error, insert query failed');
-                $listingCounter = $listingCounter + 1;
+                $listingCounter = $listingCounter - 1;
             }
         }
     }
