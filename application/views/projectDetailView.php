@@ -71,7 +71,30 @@
                 </div>            
             </div>
             </a>
-            <?php }?>
+            <?php }
+            if ($sql->num_rows()==0) { ?>
+
+                <?php 
+                $sql=$this->db->query("select 
+                    projects.title,projects.id,projects.image,projects.project_year,projects.publish,projects.reorder,projects.subbrand,
+                    customers.id as cid,customers.title as customer_name,customers.image_gray
+                 from projects,customers where customers.id=projects.customer and projects.publish=1 order by projects.reorder desc limit 0,1");
+                foreach($sql->result() as $p) {
+                ?>
+                <a href="<?php echo base_url($this->lang->line('lang').'projects/detail/'.$p->id) ?>">
+                <div class="prev_next" style="background-image: url(<?php echo base_url('uploads/thumb_'.$p->image) ?>);">            
+                    <div class="icon"></div>
+                    <div class="text">
+                        <span><?php echo $p->project_year.' '.$p->customer_name.' '.$p->subbrand ?></span>
+                        <span class="alt_title"><?php echo $p->title ?></span>
+                    </div>            
+                </div>
+                </a>
+                <?php }?>
+
+            <?php } ?>
+
+
 
 
             <?php 
@@ -90,7 +113,29 @@
                 </div>            
             </div>
             </a>
-            <?php }?>
+            <?php }
+            
+            if ($sql->num_rows()==0) { ?>
+
+                <?php 
+                $sql=$this->db->query("select 
+                    projects.title,projects.id,projects.image,projects.project_year,projects.publish,projects.reorder,projects.subbrand,
+                    customers.id as cid,customers.title as customer_name,customers.image_gray
+                 from projects,customers where customers.id=projects.customer and projects.publish=1 order by projects.reorder asc limit 0,1");
+                foreach($sql->result() as $p) {
+                ?>
+                <a href="<?php echo base_url($this->lang->line('lang').'projects/detail/'.$p->id) ?>">
+                <div class="prev_next" style="background-image: url(<?php echo base_url('uploads/thumb_'.$p->image) ?>);">            
+                    <div class="icon"></div>
+                    <div class="text">
+                        <span><?php echo $p->project_year.' '.$p->customer_name.' '.$p->subbrand ?></span>
+                        <span class="alt_title"><?php echo $p->title ?></span>
+                    </div>            
+                </div>
+                </a>
+                <?php }?>
+
+            <?php } ?>
             <div class="more_box">
                 <a href="<?php echo base_url($this->lang->line('lang').'projects') ?>" class="button">TÜM İŞLER</a>
             </div>

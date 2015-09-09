@@ -49,7 +49,7 @@
         $sql=$this->db->query("select * from news where publish=1 order by reorder asc limit 0,3");
         foreach($sql->result() as $news) {
         ?>
-        <a href="" target="_blank">
+        <a href="<?php echo $news->link ?>" target="_blank">
             <div class="box">
                 <div class="bg" style="background-image: url(<?php echo base_url('uploads/'.$news->image) ?>);"></div>
                 <div class="desc <?php if ($i%2<>0) { echo 'wh_back'; } else { echo 'dg_back'; } ?>">
@@ -79,7 +79,7 @@
                 <div class="box">
                     <div class="title">BİZ</div>
                     PROPAGANDAYI GÖRMEK İÇİN BUTONA BASIN!
-                    <a class="email">DAHA FAZLA</a>
+                    <a href="<?php echo base_url($this->lang->line('lang').'team') ?>" class="email">DAHA FAZLA</a>
                 </div>
             </div> 
         </div>
