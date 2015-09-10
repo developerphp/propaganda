@@ -345,6 +345,7 @@ a:active {
   background: #2c2c2c;
   position: fixed;
   z-index: 999;
+  overflow-y: auto;
 }
 
 .menu .logo {
@@ -531,7 +532,7 @@ a:active {
 .right_box .txt .button {
   color: #fff;
   margin: 60px 0;
-  display: block;
+  display: inline-block;
   border: 1px solid;
   border-top-color: #ef6e67;
   border-left-color: #ef6e67;
@@ -540,6 +541,7 @@ a:active {
   text-align: center;
   width: 110px;
   padding: 6px 0;
+  margin-left: 10px;
 }
 
 .right_box .txt .button:hover {
@@ -959,10 +961,11 @@ a:active {
 }
 
 .home_box .footer_box .footer .box {
-  width: 80px;
+  width: 200px;
   margin: 0 auto;
-  letter-spacing: 5px;
-  margin-top: 60px;
+  letter-spacing: 4px;
+  margin-top: 100px;
+  font-size: 18px;
 }
 
 .home_box .footer_box .about_us {
@@ -1010,7 +1013,7 @@ a:active {
 .home_box .footer_box .email {
   float: none;
   margin: 0 auto;
-  margin-top: 20px;
+  margin-top: 50px;
   display: block;
   border: 1px solid;
   border-top-color: #cbc9c9;
@@ -1282,8 +1285,8 @@ a:active {
   height: 25% !important;
 }
 
-.works_row_mini .pink .alt_title {
-  color: #cbc9c9;
+.works_row_mini .pink .txt .alt_title {
+  color: #4b4c4b !important;
 }
 
 .works_row_mini .pink .button {
@@ -2037,10 +2040,40 @@ a:active {
   }
 }
 
+@media screen and (max-height: 550px) {
+  .menu {
+    padding-top: 15px;
+  }
+  .menu .logo {
+    margin-bottom: 15px;
+  }
+  .menu .item {
+    margin: 5px auto;
+    font-size: 20px;
+  }
+  .menu .social {
+    margin: 15px auto;
+  }
+  .menu .social a {
+    margin-left: 15px;
+  }
+  .menu .social a img {
+    width: 15px;
+  }
+}
+
 /*fancybox*/
 .fancybox-overlay {
   z-index: 999999;
   background: #000;
+}
+
+.fancybox-overlay .fancybox-close {
+  top: 18px !important;
+  right: 18px !important;
+  left: auto !important;
+  width: 36px !important;
+  height: 36px !important;
 }
 
 .fancybox-overlay .fancybox-skin {
@@ -2062,9 +2095,4 @@ a:active {
 .fancybox-overlay .fancybox-type-iframe .fancybox-outer, .fancybox-overlay .fancybox-type-iframe .fancybox-inner {
   width: 100% !important;
   height: 100% !important;
-}
-
-.fancybox-overlay .fancybox-type-iframe .fancybox-close {
-  top: -9%;
-  right: -10%;
 }

@@ -26,7 +26,7 @@
              from projects,customers where customers.id=projects.customer and projects.publish=1 order by projects.reorder desc limit 0,3");
             foreach($sql->result() as $project) {
             ?>
-            <a href="<?php echo base_url($this->lang->line('lang').'projects/detail/'.$project->id) ?>" target="_blank">
+            <a href="<?php echo base_url($this->lang->line('lang').'projects/detail/'.$project->id) ?>">
                 <div class="box" style="background-image: url(<?php echo base_url('uploads/'.$project->image) ?>);">
                     <div class="txt">
                         <span><?php echo $project->project_year.' '.$project->customer_name.' '.$project->subbrand ?></span>

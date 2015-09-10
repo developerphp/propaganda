@@ -89,6 +89,7 @@ a:active{
     background: $c_footer;
     position: fixed;
     z-index: 999;
+    overflow-y: auto; 
     .logo{
     	background: url(../img/menu_logo.png) no-repeat;
 	    background-size: 250px 41px;
@@ -252,7 +253,7 @@ a:active{
 		.button{
 			color: #fff;
 			margin: 60px 0;
-		    display: block;
+		    display: inline-block;
 		    border: 1px solid;
 		    border-top-color: $c_pink;
 		    border-left-color: $c_pink;
@@ -261,6 +262,7 @@ a:active{
 		    text-align: center;
 		    width: 110px;
 		    padding: 6px 0;
+		    margin-left: 10px;
 		    &:hover{
 				color: #fff;
 				background: $c_pink;;
@@ -626,10 +628,11 @@ a:active{
 	    	background-color: $c_footer;
 	    	margin-bottom: 0;
 	    	.box{
-	    		width: 80px;
+	    		width: 200px;
 			    margin: 0 auto;
-			    letter-spacing: 5px;
-			    margin-top: 60px;
+			    letter-spacing: 4px;
+			    margin-top: 100px;
+			    font-size: 18px;
 	    	}
 	    }
 	    .about_us{
@@ -672,7 +675,7 @@ a:active{
 	    .email{
 	    	float: none;
 	    	margin: 0 auto;
-	    	margin-top: 20px;
+	    	margin-top: 50px;
 			display: block;
 			border: 1px solid;
 			border-top-color: $c_grey;
@@ -913,8 +916,10 @@ a:active{
 	width: 50% !important;
 	height: 25% !important;
 	.pink{
-		.alt_title{
-			color: $c_grey;		
+		.txt{
+			.alt_title{
+				color: $c_darkGrey !important;
+			}
 		}
 		.button{
 			border-top-color: #fff;
@@ -1719,11 +1724,39 @@ a:active{
 		}
 	}
 }
+@media screen and (max-height: 550px){
+	.menu{
+		padding-top: 15px;
+		.logo{
+			margin-bottom: 15px;
+		}
+		.item{
+			margin: 5px auto;
+    		font-size: 20px;
+		}
+		.social{
+			margin: 15px auto;
+			a{
+				margin-left: 15px;
+				img{
+					width: 15px;
+				}
+			}
+		}
+	}
+}
 
 /*fancybox*/
 .fancybox-overlay{
 	z-index: 999999;
 	background: #000;
+	.fancybox-close{
+		top: 18px !important;
+	    right: 18px !important;
+	    left: auto !important;
+	    width: 36px !important;
+	    height: 36px !important;
+	}
 	.fancybox-skin{
 		background: none;
 	}
@@ -1739,10 +1772,6 @@ a:active{
 		.fancybox-outer, .fancybox-inner{
 			width: 100% !important;
 	    	height: 100% !important;
-		}
-		.fancybox-close{
-			top: -9%;
-	    	right: -10%;
 		}
 	}	
 }

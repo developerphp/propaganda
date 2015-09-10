@@ -1443,7 +1443,7 @@
 
 			// Create a close button
 			if (current.closeBtn) {
-				$(current.tpl.closeBtn).appendTo(F.skin).bind('click.fb', function(e) {
+				$(current.tpl.closeBtn).appendTo(".fancybox-overlay").bind('click.fb', function(e) {
 					e.preventDefault();
 
 					F.close();

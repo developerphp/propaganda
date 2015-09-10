@@ -2,7 +2,7 @@
 <div class="menu_close"></div>
     
 <div class="menu">
-	<div class="logo"></div>
+	<a href="<?php echo base_url(); ?>"><div class="logo"></div></a>
 	<div class="item"><a href="<?php echo base_url(); ?>">ANA SAYFA</a></div>
     <div class="item"><a href="<?php echo base_url($this->lang->line('lang').'team') ?>">BİZ</a></div>
     <div class="item"><a href="<?php echo base_url($this->lang->line('lang').'brands') ?>">MARKALAR</a></div>
