@@ -56,7 +56,7 @@
             <div class="title_box">
                 <div>
                     <span class="title">İLETİŞİM</span>
-                    <a class="email" href="mailto:merhaba@propaganda.com">MERHABA@<span class="grey_txt">PROPAGANDA.COM</span></a>
+                    <a class="email" href="mailto:merhaba@propaganda.com.tr">MERHABA@<span class="grey_txt">PROPAGANDA.COM.TR</span></a>
                 </div>
             </div>
             <div id="map" class="map_box">

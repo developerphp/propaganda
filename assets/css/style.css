@@ -1232,8 +1232,9 @@ a:active {
   margin-left: 20%;
   width: 80%;
   color: #ef6e67;
-  font-size: 34px;
+  font-size: 28px;
   letter-spacing: 6px;
+  font-weight: bold;
 }
 
 .left_box .txt .button, .right_box_con .txt .button, .works_row .txt .button, .works_row_mini .txt .button {
@@ -1322,49 +1323,48 @@ a:active {
   font-size: 20px;
 }
 
-.blurit {
-  cursor: pointer;
-  position: relative;
-}
+/*.blurit{
+	cursor: pointer;
+	position: relative;
 
-.blurit .brand_logo {
-  position: absolute;
-  width: 25%;
-  bottom: 35%;
-  left: 12.5%;
-  z-index: 10;
-  opacity: 0;
-  transition: all ease 0.5s;
-}
+	.brand_logo{
+		position: absolute;
+		width: 25%;
+		bottom: 35%;
+		left: 12.5%;
+		z-index: 10;
+		opacity: 0;
+		transition: all ease 0.5s;
+		img{
+			width: 100%;
+		}
+	}
 
-.blurit .brand_logo img {
-  width: 100%;
-}
+	&:after{
+		content:"";
+		position: absolute;
+		width: 50%;
+		height: 100%;
+		background: rgba(0,0,0,0.5);
+		transition: all ease 0.5s;
+		opacity: 0;
+		z-index: 9;
+		top: 0;
+		left: 0;
+	}	
 
-.blurit:after {
-  content: "";
-  position: absolute;
-  width: 50%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  transition: all ease 0.5s;
-  opacity: 0;
-  z-index: 9;
-  top: 0;
-  left: 0;
-}
-
-.blurit:hover:after {
-  transition: all ease 0.5s;
-  opacity: 1;
-}
-
-.blurit:hover .brand_logo {
-  transition: all ease 0.5s;
-  opacity: 1;
-  bottom: 45%;
-}
-
+	&:hover{
+		&:after{
+			transition: all ease 0.5s;
+			opacity: 1;
+		}
+		.brand_logo{
+			transition: all ease 0.5s;
+			opacity: 1;
+			bottom: 45%;
+		}
+	}
+}*/
 /*team_page*/
 .team_box {
   background: #4b4c4b;
@@ -1372,7 +1372,7 @@ a:active {
 }
 
 .team_box .logo {
-  background: url(../img/logo.png);
+  background: url(../img/logo_dark.png);
   height: 33px;
   margin: 70px auto;
   margin-bottom: 50px;
@@ -1448,9 +1448,9 @@ a:active {
 }
 
 .brands_box .members .member {
-  width: calc(25% - 40px);
-  width: -moz-calc(25% - 40px);
-  width: -webkit-calc(25% - 40px);
+  width: calc(20% - 40px);
+  width: -moz-calc(20% - 40px);
+  width: -webkit-calc(20% - 40px);
   margin: 20px;
   height: auto !important;
 }
@@ -1839,6 +1839,11 @@ a:active {
     width: -moz-calc(50% - 10px);
     height: 500px;
   }
+  .brands_box .members .member {
+    width: calc(25% - 40px);
+    width: -webkit-calc(25% - 40px);
+    width: -moz-calc(25% - 40px);
+  }
   .detail .right {
     display: table;
     padding: 40px 40px 0 40px;
@@ -1892,11 +1897,6 @@ a:active {
   .home_box .footer_box .about_us .box {
     width: 200px;
     margin-top: 200px;
-  }
-  .brands_box .members .member {
-    width: calc(50% - 40px);
-    width: -webkit-calc(50% - 40px);
-    width: -moz-calc(50% - 40px);
   }
   .gallery .fancybox {
     width: 100%;
@@ -1999,6 +1999,11 @@ a:active {
   }
   .team_box .members .member {
     height: 200px;
+  }
+  .brands_box .members .member {
+    width: calc(50% - 40px);
+    width: -webkit-calc(50% - 40px);
+    width: -moz-calc(50% - 40px);
   }
   .fixed_box {
     height: 400px;
