@@ -174,12 +174,7 @@
                                         <option value="<?php echo $customer->id ?>"<?php if ($customer->id==$project->customer) { echo ' selected="selected"'; } ?>><?php echo $customer->title ?></option>
                                     <?php }?>
                                 </select>
-                            </div>
-                            <div style="width:25%;float:left;margin-left:5%;">
-                                <b>Sub Brand</b><br/>
-                                <span>Brand</span>
-                                <input type="text" name="subbrand" value="<?php echo $project->subbrand ?>" />
-                            </div>
+                            </div>                            
                             <div style="width:25%;float:left;margin-left:5%;">
                                 <b>Project Year</b><br/>
                                 <span>Year</span>
@@ -192,13 +187,17 @@
                             <div class="clear"></div>
                         </div>
                         <br/>
+                        <b>Sub Brand</b><br/>
+                        <span>Brand</span>
+                        <input type="text" name="subbrand" value="<?php echo $project->subbrand ?>" />                                           
+                        <br/>
                         <b>Name of Project</b><br/>
                         <span>Please enter the name of the project </span>
                         <input type="text" name="title" value="<?php echo $project->title ?>" />
                         <input type="hidden" name="id" value="<?php echo $project->id ?>" />
                         <input type="hidden" name="saveclose" id="saveclose" value="0">                                                                                               
                         <div class="clear"></div>
-                        <br/>                                            
+                        <br/>                         
                         <b>Content of Project</b><br/>
                         <span>Please enter the project content</span>
                         <textarea id="editor2" name="content"><?php echo $project->content ?></textarea>
