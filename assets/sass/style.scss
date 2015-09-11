@@ -1002,7 +1002,7 @@ a:active{
 	background: $c_darkGrey;
 	padding-bottom: 355px;
 	.logo{
-		background: url(../img/logo_dark.png);
+		background: url(../img/logo.png);
 		height: 33px;
 		margin: 70px auto;
 		margin-bottom: 50px;
@@ -1072,6 +1072,9 @@ a:active{
 
 .brands_box{
 	background: #fff !important;
+	.logo{
+		background: url(../img/logo_dark.png);
+	}
 	.members{
 		.member{
 			width: calc(20% - 40px);

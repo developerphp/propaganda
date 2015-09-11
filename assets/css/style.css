@@ -1372,7 +1372,7 @@ a:active {
 }
 
 .team_box .logo {
-  background: url(../img/logo_dark.png);
+  background: url(../img/logo.png);
   height: 33px;
   margin: 70px auto;
   margin-bottom: 50px;
@@ -1445,6 +1445,10 @@ a:active {
 /*brands*/
 .brands_box {
   background: #fff !important;
+}
+
+.brands_box .logo {
+  background: url(../img/logo_dark.png);
 }
 
 .brands_box .members .member {
