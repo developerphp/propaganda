@@ -32,7 +32,7 @@
                         <span><?php echo $project->project_year.' '.$project->customer_name.' '.$project->subbrand ?></span>
                         <span class="desc"><?php echo $project->title ?></span>
                     </div>
-                     <div class="logo"><img src="<?php echo base_url('uploads/'.$project->image_gray) ?>" alt="logo"></div>
+                     <!-- <div class="logo"><img src="<?php echo base_url('uploads/'.$project->image_gray) ?>" alt="logo"></div> -->
                 </div>
             </a>
             <?php }?>
