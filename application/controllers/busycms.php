@@ -2280,6 +2280,97 @@ class Busycms extends CI_Controller {
         }
     }
 
+    public function projectcoverimageupload($id) {
+        $login = $this->session->userdata('busylogin');
+        if ($login == 1) {
+            $this->load->model('busycms_model');
+
+            $sql = $this->db->query("select * from projects where id=" . $this->db->escape($id) . "");
+            foreach ($sql->result() as $project) {
+
+                $name = $_FILES['resim']['name'];
+                $config['upload_path'] = './uploads/';
+                $config['allowed_types'] = 'gif|jpg|png|jpeg';
+                $config['max_size'] = '6000';
+                /* $config['max_width']  = '1024';
+                  $config['max_height']  = '768'; */
+                $config['file_name'] = $this->busycms_model->seo_url($name);
+                $this->load->library('upload', $config);
+                if (!$this->upload->do_upload('resim')) {
+                    ?>
+                    <script>
+                        alert('<?php echo $this->upload->display_errors() ?>');
+                    </script>
+                    <?php
+                } else {
+                    $this->load->library('image_lib');
+
+                    $data = array('upload_data' => $this->upload->data());
+                    $resimadi = $this->upload->file_name;
+
+
+                    unset($config);
+                    $config = array();
+                    $config['source_image'] = "./uploads/" . $resimadi;
+                    $config['image_library'] = 'gd2';
+                    $config['maintain_ratio'] = TRUE;
+                    $config['new_image'] = './uploads/' . $resimadi;
+                    $this->image_lib->initialize($config);
+                    $this->image_lib->resize();
+                    $width = $this->image_lib->width;
+                    $this->image_lib->clear();
+                    unset($config);
+
+                    if ($width > 1024) {
+                        unset($config);
+                        $config = array();
+                        $config['source_image'] = "./uploads/" . $resimadi;
+                        $config['image_library'] = 'gd2';
+                        $config['maintain_ratio'] = TRUE;
+                        $config['new_image'] = './uploads/' . $resimadi;
+                        $config['master_dim'] = 'width';
+                        $config['quality']='100%';
+                        $config['width'] = 1024;
+                        $config['height'] = 576;
+                        $this->image_lib->initialize($config);
+                        $this->image_lib->resize();
+                        $this->image_lib->clear();
+                        unset($config);
+                    }
+
+                    unset($config);
+                    //Create 250px version
+                    $config = array();
+                    $config['source_image'] = "./uploads/" . $this->upload->file_name;
+                    $config['image_library'] = 'gd2';
+                    $config['maintain_ratio'] = TRUE;
+                    $config['new_image'] = './uploads/thumb_' . $this->upload->file_name;
+                    $config['master_dim'] = 'width';
+                    $config['width'] = 300;
+                    $config['height'] = 200;
+                    $config['quality']='100%';
+                    $this->image_lib->initialize($config);
+                    $this->image_lib->resize();
+                    $this->image_lib->clear();
+                    $width = $this->image_lib->width;
+                    $height = $this->image_lib->height;
+                    unset($config);
+
+                    $array = array('cover_image' => $this->upload->file_name);
+                    $this->db->where('id', $id);
+                    if ($this->db->update('projects', $array)) {
+                        ?>
+                        <script>
+                            //parent.location.href='<?php echo base_url() ?>busycms/productcropmainimage/<?php echo $id ?>';
+                            parent.$('#cover_image').attr('src', '<?php echo base_url() ?>uploads/<?php echo $this->upload->file_name ?>')
+                        </script>
+                        <?php
+                    }
+                }
+            }
+        }
+    }
+
     public function customermainimageupload($id,$gray) {
         $login = $this->session->userdata('busylogin');
         if ($login == 1) {

@@ -104,8 +104,20 @@
             <div id="editprojectform_back"></div>
             <div class="editevent-left">
                 <div id="eventimage">
+
                     <div align="center" style="padding:5px 0;">
-                       Main Image
+                       Cover Image 1024px - 576px
+                    </div>
+                    <?php if (strlen($project->cover_image) == 0) { ?>
+                        <img id="cover_image" src="<?php echo base_url() ?>busycms/images/add-photo-big.png" width="300" onclick="$('#myfile2').click();" style="cursor:pointer;" />
+                    <?php } else { ?>
+                        <div class="eventmainimage" onclick="$('#myfile').click();" style="cursor:pointer;">
+                            <img id="cover_image" src="<?php echo base_url() ?>uploads/<?php echo $project->cover_image ?>" onclick="$('#myfile2').click();" width="300" />                            
+                        </div>
+                    <?php } ?>
+                    <br/><br/>
+                    <div align="center" style="padding:5px 0;">
+                       Detail Image 1000px - 1000px
                     </div>
                     <?php if (strlen($project->image) == 0) { ?>
                         <img id="bigimage" src="<?php echo base_url() ?>busycms/images/add-photo-big.png" width="300" onclick="$('#myfile').click();" style="cursor:pointer;" />
@@ -119,6 +131,11 @@
                             <input name="resim" type="file" id="myfile" style="height:30px;" onchange="$('#uploadimage').submit();" />
                         </form>
                         <iframe id="ajax" name="ajax"></iframe>     
+
+                        <form id="uploadimage2" action="<?php echo base_url() ?>busycms/projectcoverimageupload/<?php echo $project->id ?>" method="post" enctype="multipart/form-data" target="ajax2">
+                            <input name="resim" type="file" id="myfile2" style="height:30px;" onchange="$('#uploadimage2').submit();" />
+                        </form>
+                        <iframe id="ajax2" name="ajax2"></iframe>     
                     </div>
                 </div>
                 <!--                <div class="leftmenu">
@@ -186,10 +203,10 @@
                             </div> 
                             <div class="clear"></div>
                         </div>
-                        <br/>
+                        <!-- <br/>
                         <b>Sub Brand</b><br/>
                         <span>Brand</span>
-                        <input type="text" name="subbrand" value="<?php echo $project->subbrand ?>" />                                           
+                        <input type="text" name="subbrand" value="<?php echo $project->subbrand ?>" />                                            -->
                         <br/>
                         <b>Name of Project</b><br/>
                         <span>Please enter the name of the project </span>

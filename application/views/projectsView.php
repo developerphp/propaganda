@@ -15,7 +15,7 @@
     $renk2="pink";
     $class="pink";
     $sql=$this->db->query("select 
-        projects.title,projects.id,projects.image,projects.project_year,projects.publish,projects.reorder,projects.subbrand,projects.content,
+        projects.title,projects.id,projects.cover_image as image,projects.project_year,projects.publish,projects.reorder,projects.subbrand,projects.content,
         customers.id as cid,customers.title as customer_name,customers.image as customer_logo
      from projects,customers where customers.id=projects.customer and projects.publish=1 order by projects.reorder desc");
     foreach($sql->result_array() as $project) {
@@ -28,7 +28,6 @@
                                 <span class="year"><?php echo $project["project_year"] ?></span>
                                 <span class="title">
                                     <?php echo $project["customer_name".$this->lang->line('dil')] ?>
-                                    <?php echo $project["subbrand".$this->lang->line('dil')] ?>
                                 </span>
                                 <span class="alt_title"><?php echo $project["title".$this->lang->line('dil')] ?></span>
                                 <span class="desc"><?php echo $project["content".$this->lang->line('dil')] ?></span>
@@ -44,7 +43,6 @@
                                 <span class="year"><?php echo $project["project_year"] ?></span>
                                 <span class="title">
                                     <?php echo $project["customer_name".$this->lang->line('dil')] ?>
-                                    <?php echo $project["subbrand".$this->lang->line('dil')] ?>
                                 </span>
                                 <span class="alt_title"><?php echo $project["title".$this->lang->line('dil')] ?></span>
                                 <span class="desc"><?php echo $project["content".$this->lang->line('dil')] ?></span>
@@ -65,7 +63,6 @@
                                 <span class="year"><?php echo $project["project_year"] ?></span>
                                 <span class="title">
                                     <?php echo $project["customer_name".$this->lang->line('dil')] ?>
-                                    <?php echo $project["subbrand".$this->lang->line('dil')] ?>
                                 </span>
                                 <span class="alt_title"><?php echo $project["title".$this->lang->line('dil')] ?></span>
                                 <span class="desc"><?php echo $project["content".$this->lang->line('dil')] ?></span>
@@ -93,7 +90,7 @@
                     <div class="boxes <?php echo $class ?> square">
                          <div class="txt">
                             <span class="year"><?php echo $project["project_year"] ?></span>
-                            <span class="title"><?php echo $project["subbrand".$this->lang->line('dil')] ?></span>
+                            <!-- <span class="title"><?php echo $project["subbrand".$this->lang->line('dil')] ?></span> -->
                             <span class="alt_title"><?php echo $project["title".$this->lang->line('dil')] ?></span>
                             <span class="button">İNCELE</span>
                         </div>

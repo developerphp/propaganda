@@ -19,7 +19,7 @@
         <div class="project_boxes">
             <?php 
             $sql=$this->db->query("select 
-                projects.title,projects.id,projects.image,projects.project_year,projects.publish,projects.reorder,projects.subbrand,
+                projects.title,projects.id,projects.cover_image as image,projects.project_year,projects.publish,projects.reorder,projects.subbrand,
                 customers.id as cid,customers.title as customer_name,customers.image_gray
              from projects,customers where customers.id=projects.customer and projects.publish=1 order by projects.reorder desc limit 0,3");
             foreach($sql->result() as $project) {
@@ -27,7 +27,7 @@
             <a href="<?php echo base_url($this->lang->line('lang').'projects/detail/'.$project->id) ?>">
                 <div class="box" style="background-image: url(<?php echo base_url('uploads/'.$project->image) ?>);">
                     <div class="txt">
-                        <span><?php echo $project->project_year.' '.$project->customer_name.' '.$project->subbrand ?></span>
+                        <span><?php echo $project->project_year.' '.$project->customer_name ?></span>
                         <span class="desc"><?php echo $project->title ?></span>
                     </div>
                      <!-- <div class="logo"><img src="<?php echo base_url('uploads/'.$project->image_gray) ?>" alt="logo"></div> -->
