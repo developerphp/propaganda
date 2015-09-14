@@ -13,7 +13,7 @@
             <video id="HomeVideo" autoplay muted>
                  <source src="<?php echo base_url() ?>assets/showreel.mp4" type="video/mp4">
             </video>
-            <a class="logo fancybox-media" href="https://vimeo.com/137252466" rel="media-gallery"></a>
+            <a class="logo fancybox-media" href="https://player.vimeo.com/video/137252466?color=ef6e67&title=0&byline=0&portrait=0" rel="media-gallery"></a>
             <div class="v_placeholder" style="background-image: url(<?php echo base_url() ?>assets/img/video.jpg);"></div>
         </div>
         <div class="project_boxes">

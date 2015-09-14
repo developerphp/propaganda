@@ -253,7 +253,7 @@ a:active{
 		}
 		.button{
 			color: #fff;
-			margin: 60px 0;
+			margin: 40px 0;
 		    display: inline-block;
 		    border: 1px solid;
 		    border-top-color: $c_pink;
@@ -264,6 +264,7 @@ a:active{
 		    width: 110px;
 		    padding: 6px 0;
 		    margin-left: 10px;
+		    margin-bottom: 0;
 		    &:hover{
 				color: #fff;
 				background: $c_pink;;
@@ -511,11 +512,12 @@ a:active{
 				opacity: 0;
 				font-size: 32px;
 				transition: all ease 0.5s;
+				letter-spacing: 3px;
 				span{
 					display: block;
 				}
 				.desc{
-					margin-left: 55px;
+					margin-left: 65px;
 				}
 			}
 			.logo{
@@ -1455,7 +1457,7 @@ a:active{
 			width: 50%;	
 		}
 		.square{
-			border-top: 1px solid $c_grey;
+			border-top: 1px solid #565656;
 		}
 		.pink{
 			background: $c_darkGrey;
@@ -1501,9 +1503,16 @@ a:active{
 				width: -webkit-calc(50% - 10px);
 				width: -moz-calc(50% - 10px);
 				height: 500px;
+				.name{
+					opacity: 1;
+				}
+				&:after{
+					opacity: 1;
+				}
 			}
 		}
 	}
+
 	.brands_box{
 		.members{
 			.member{
@@ -1516,7 +1525,7 @@ a:active{
 	.detail{
 		.right{
 			display: table;
-			padding: 40px 40px 0 40px;
+			padding: 40px 40px 0 70px;
 			.r_left, .r_right{
 				width: 100%;
 			}
@@ -1769,6 +1778,11 @@ a:active{
 		}
 		.footer{
 			margin-bottom: 0;
+		}
+	}
+	.detail{
+		.right{
+			padding: 40px 40px 0 50px;
 		}
 	}
 }

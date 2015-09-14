@@ -60,7 +60,7 @@
         <div class="projects_box">
             <div class="title_box">
                 <div class="line"></div>
-                <div><span class="pink_txt">DİĞER</span> FİLMLER</div>
+                <div><span class="pink_txt">DİĞER</span> İŞLER</div>
             </div>
             <?php             
             foreach($sql->result() as $p) {
