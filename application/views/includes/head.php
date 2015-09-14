@@ -19,3 +19,4 @@
 <script src="<?php echo base_url() ?>assets/js/jquery.fancybox.js"></script>
 <script src="<?php echo base_url() ?>assets/js/jquery.fancybox-media.js"></script>
 
+

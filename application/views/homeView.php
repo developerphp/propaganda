@@ -14,9 +14,7 @@
                  <source src="<?php echo base_url() ?>assets/showreel.mp4" type="video/mp4">
             </video>
             <a class="logo fancybox-media" href="https://vimeo.com/137252466" rel="media-gallery"></a>
-            <div class="v_placeholder">
-                <img src="<?php echo base_url() ?>assets/img/video.jpg" width="100%" alt="video">
-            </div>
+            <div class="v_placeholder" style="background-image: url(<?php echo base_url() ?>assets/img/video.jpg);"></div>
         </div>
         <div class="project_boxes">
             <?php 

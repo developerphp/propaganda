@@ -1,4 +1,5 @@
 <?php $this->load->view('includes/head') ?>
+<link href="<?php echo base_url() ?>assets/css/style.css" type="text/css" rel="stylesheet">
 
 </head>
 

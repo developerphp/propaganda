@@ -27,7 +27,6 @@
                     <?php }?>
                 </div>
                 <span class="year"><?php echo $project['project_year'] ?></span>
-                <span class="title"><?php echo $customer_name ?></span>
                 <span class="title"><?php echo $project['subbrand'.$this->lang->line('dil')] ?></span>
                 <span class="alt_title"><?php echo $project['title'.$this->lang->line('dil')] ?></span>
                 <span class="small"><?php echo $project['content'.$this->lang->line('dil')] ?></span>
@@ -87,5 +86,6 @@
     
 
 <?php $this->load->view('includes/scripts.php') ?>
+
 </body>
 </html>
