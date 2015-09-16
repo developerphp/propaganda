@@ -1750,6 +1750,15 @@ a:active {
   }
 }
 
+@media (min-width: 1101px) and (max-width: 1366px) {
+  .menu {
+    padding-top: 50px;
+  }
+  .menu .logo {
+    margin-bottom: 30px;
+  }
+}
+
 @media screen and (max-width: 1300px) {
   .works_row {
     height: 60% !important;
