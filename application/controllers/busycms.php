@@ -3754,6 +3754,7 @@ class Busycms extends CI_Controller {
             $subbrand=$this->input->post('subbrand');
 
             $videos=$this->input->post('videos');
+            $video_titles=$this->input->post('video_titles');
             $sounds=$this->input->post('sounds');
             
             $kategoriler="";
@@ -3805,10 +3806,12 @@ class Busycms extends CI_Controller {
             $this->db->where('project_id',$id);
             $this->db->delete('projectvideos');
 
+            $i=0;
             foreach($videos as $video) {
                 if (strlen($video)>0) {
-                    $this->db->insert('projectvideos',array('project_id'=>$id,'video_url'=>$video)); 
-                }
+                    $this->db->insert('projectvideos',array('project_id'=>$id,'video_url'=>$video,'title'=>$video_titles[$i]));                     
+                }                
+                $i++;
             }
 
             $this->db->where('project_id',$id);

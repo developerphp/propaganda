@@ -34,7 +34,7 @@
                 foreach($sql->result() as $video) {
                 ?>
                 <a class="button fancybox-media" href="<?php echo $video->video_url ?>" rel="media-gallery">
-                    VIDEO
+                    <?php echo $video->title ?>
                 </a>
                 <?php } ?>
             </div>

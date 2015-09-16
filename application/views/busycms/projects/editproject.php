@@ -271,7 +271,9 @@
 
                         ?>
                             <div class="video" style="margin:10px 0;">
-                                <input type="text" name="videos[]" value="<?php echo $video->video_url ?>" />
+                                <input type="text" name="video_titles[]" value="<?php echo $video->title ?>" placeholder="Video Title" style="width:48%;float:left;" />
+                                <input type="text" name="videos[]" value="<?php echo $video->video_url ?>" placeholder="Video Url" style="width:48%;float:left;float:left;margin-left:4%;" />
+                                <div class="clear"></div>
                             </div>
                         <?php }?>
                         <div id="videoslast"></div>
@@ -280,7 +282,9 @@
                         </div>
                         <div style="display:none;">                            
                             <div class="video" id="videoClone" style="margin:10px 0;">
-                                <input type="text" name="videos[]" />
+                                <input type="text" name="video_titles[]" placeholder="Video Title" style="width:48%;float:left;" />
+                                <input type="text" name="videos[]" placeholder="Video Url" style="width:48%;float:left;float:left;margin-left:4%;" />
+                                <div class="clear"></div>
                             </div>
                         </div>
                         <br/><br/>
