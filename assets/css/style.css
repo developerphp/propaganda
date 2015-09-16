@@ -587,6 +587,7 @@ a:active {
 
 .right_box .projects_box .prev_next {
   display: inline-block;
+  margin: -3px;
   width: 50%;
   height: 300px;
   font-size: 24px;
@@ -2078,20 +2079,20 @@ a:active {
   .right_box .boxes .txt .year {
     position: static;
   }
-  .right_box .boxes .projects_box .title_box {
+  .right_box .projects_box .title_box {
     width: 70%;
   }
-  .right_box .boxes .projects_box .prev_next {
+  .right_box .projects_box .prev_next {
     width: 100%;
   }
-  .right_box .boxes .projects_box .more_box {
+  .right_box .projects_box .more_box {
     width: 70%;
     margin-left: 15%;
   }
-  .right_box .boxes .projects_box .logo_box div {
+  .right_box .projects_box .logo_box div {
     width: 70%;
   }
-  .right_box .boxes .projects_box .logo_box .logo {
+  .right_box .projects_box .logo_box .logo {
     width: 200px;
   }
   .contact_box .boxes .title_box {
