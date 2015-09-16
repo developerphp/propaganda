@@ -261,9 +261,9 @@ a:active{
 		    border-bottom-color: $c_grey;
 		    border-right-color: $c_grey;
 		    text-align: center;
-		    width: 110px;
-		    padding: 6px 0;
-		    margin-left: 10px;
+		    width: auto;
+		    padding: 6px 30px;
+		    margin-right: 10px;
 		    margin-bottom: 0;
 		    &:hover{
 				color: #fff;
