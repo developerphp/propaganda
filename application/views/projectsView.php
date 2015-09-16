@@ -11,15 +11,15 @@
 
     <?php 
     $i=1;
-    $renk1="pink";
-    $renk2="pink";
-    $class="pink";
+    $renk1="dark";
+    $renk2="dark";
+    $class="dark";
     $sql=$this->db->query("select 
         projects.title,projects.id,projects.cover_image as image,projects.project_year,projects.publish,projects.reorder,projects.subbrand,projects.content,
         customers.id as cid,customers.title as customer_name,customers.image as customer_logo
      from projects,customers where customers.id=projects.customer and projects.publish=1 order by projects.reorder desc");
     foreach($sql->result_array() as $project) {
-        if ($i<=8) {
+        if ($i<=3) {
             if ($i%2==0) { ?>
                 <div class="works_row">
                     <a href="<?php echo base_url($this->lang->line('lang').'projects/detail/'.$project['id']) ?>">
@@ -30,7 +30,6 @@
                                     <?php echo $project["customer_name".$this->lang->line('dil')] ?>
                                 </span>
                                 <span class="alt_title"><?php echo $project["title".$this->lang->line('dil')] ?></span>
-                                <span class="desc"><?php echo $project["content".$this->lang->line('dil')] ?></span>
                                 <span class="button">İNCELE</span>
                             </div>
                          </div>
@@ -45,7 +44,6 @@
                                     <?php echo $project["customer_name".$this->lang->line('dil')] ?>
                                 </span>
                                 <span class="alt_title"><?php echo $project["title".$this->lang->line('dil')] ?></span>
-                                <span class="desc"><?php echo $project["content".$this->lang->line('dil')] ?></span>
                                 <span class="button">İNCELE</span>
                             </div>
                          </div>
@@ -65,7 +63,6 @@
                                     <?php echo $project["customer_name".$this->lang->line('dil')] ?>
                                 </span>
                                 <span class="alt_title"><?php echo $project["title".$this->lang->line('dil')] ?></span>
-                                <span class="desc"><?php echo $project["content".$this->lang->line('dil')] ?></span>
                                 <span class="button">İNCELE</span>
                             </div>
                          </div>
@@ -74,7 +71,7 @@
             <?php }?>
         <?php } else {
 
-            if ($i>9) {
+            if ($i>4) {
                 if (($renk1=="pink") && ($renk2=="pink")) { $class="dark"; $renk1="dark"; $renk2="pink"; }
                 elseif (($renk1=="dark") && ($renk2=="pink")) { $class="dark"; $renk1="dark"; $renk2="dark"; }
                 elseif (($renk1=="dark") && ($renk2=="dark")) { $class="pink"; $renk1="pink"; $renk2="dark"; }

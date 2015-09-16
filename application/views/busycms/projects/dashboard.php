@@ -105,7 +105,7 @@
                                 foreach($sql->result() as $project) { ?>
                                <li id="project_<?php echo $project->id ?>" class="<?php if ($project->publish==1) { echo "publish"; } else { echo "unpublish"; } ?>">
                                    <div class="image">
-                                            <img src="<?php echo base_url() ?>uploads/thumb_<?php echo $project->image ?>" />
+                                            <img src="<?php echo base_url() ?>uploads/thumb_<?php echo $project->cover_image ?>" />
                                    </div>
                                    <div class="project_menu">
                                        <div>

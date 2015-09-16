@@ -4535,6 +4535,22 @@ class Busycms extends CI_Controller {
         }
     }
 
+    public function customerorder() {
+        $action = $this->input->post('action');
+        $updateRecordsArray = $this->input->post('customer');
+
+        $sql=$this->db->query("select * from customers");
+
+        if ($action == "updateRecordsListings") {
+            $listingCounter = 1;
+            foreach ($updateRecordsArray as $recordIDValue) {
+                $query = "UPDATE customers SET reorder = " . $listingCounter . " WHERE id = " . $recordIDValue;
+                mysql_query($query) or die('Error, insert query failed');
+                $listingCounter = $listingCounter - 1;
+            }
+        }
+    }
+
     public function peopleorder() {
         $action = $this->input->post('action');
         $updateRecordsArray = $this->input->post('people');

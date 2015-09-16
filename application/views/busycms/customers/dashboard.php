@@ -26,7 +26,7 @@
                 cursor: 'move',
                 update: function() {                
                 var order = $(this).sortable("serialize") + '&action=updateRecordsListings'; 
-                $.post("<?php echo base_url() ?>busycms/projectorder", order, function(theResponse){
+                $.post("<?php echo base_url() ?>busycms/customerorder", order, function(theResponse){
                         $("#sezgin").html(theResponse);
                 }); 		
         }								  
@@ -101,7 +101,7 @@
                         <form id="scheduleform" name="scheduleform" onsubmit="return false;">
                             <ul class="project">
                                 <?php 
-                                $sql=$this->db->query("select * from customers order by reorder asc");
+                                $sql=$this->db->query("select * from customers order by reorder desc");
                                 foreach($sql->result() as $project) { ?>
                                <li id="customer_<?php echo $project->id ?>" class="<?php if ($project->publish==1) { echo "publish"; } else { echo "unpublish"; } ?>">
                                    <div class="image">
