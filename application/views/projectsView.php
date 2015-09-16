@@ -90,7 +90,7 @@
                     <div class="boxes <?php echo $class ?> square">
                          <div class="txt">
                             <span class="year"><?php echo $project["project_year"] ?></span>
-                            <!-- <span class="title"><?php echo $project["subbrand".$this->lang->line('dil')] ?></span> -->
+                            <span class="title"><?php echo $project["customer_name".$this->lang->line('dil')] ?></span>
                             <span class="alt_title"><?php echo $project["title".$this->lang->line('dil')] ?></span>
                             <span class="button">İNCELE</span>
                         </div>
