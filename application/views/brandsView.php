@@ -20,7 +20,7 @@
             <div class="logo"></div>
             <div class="members">
                 <?php 
-                $sql=$this->db->query("select * from customers where publish=1 order by reorder asc");
+                $sql=$this->db->query("select * from customers where publish=1 order by reorder desc");
                 foreach($sql->result() as $customer) {
                 ?>
                 <div class="member">
