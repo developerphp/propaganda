@@ -63,8 +63,8 @@
                                 <span class="title">
                                     <?php echo $project["customer_name".$this->lang->line('dil')] ?>
                                 </span>
-                                <span class="desc"><?php echo $project["content"] ?></span>
                                 <span class="alt_title"><?php echo $project["title".$this->lang->line('dil')] ?></span>
+                                <span class="desc"><?php echo $project["content"] ?></span>
                                 <span class="button">İNCELE</span>
                             </div>
                          </div>

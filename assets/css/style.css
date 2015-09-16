@@ -559,9 +559,11 @@ a:active {
 .right_box .projects_box {
   float: left;
   width: 100%;
+  text-align: center;
 }
 
 .right_box .projects_box .title_box {
+  text-align: left;
   padding: 80px 0;
   width: 50%;
   margin: 0 auto;
@@ -584,7 +586,7 @@ a:active {
 }
 
 .right_box .projects_box .prev_next {
-  float: left;
+  display: inline-block;
   width: 50%;
   height: 300px;
   font-size: 24px;
@@ -905,10 +907,12 @@ a:active {
 .home_box .news_boxes .box .desc .txt {
   width: 80%;
   margin-left: 8%;
-  font-size: 32px;
+  font-size: 24px;
   margin-top: 100px;
   font-weight: bold;
   letter-spacing: 3px;
+  font-weight: 600;
+  line-height: 36px;
 }
 
 .home_box .news_boxes .box .desc .txt span {
@@ -917,6 +921,9 @@ a:active {
 
 .home_box .news_boxes .box .desc .txt .pink_txt {
   color: #ef6e67;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
 
 .home_box .news_boxes .box .desc .txt .grey_txt {
