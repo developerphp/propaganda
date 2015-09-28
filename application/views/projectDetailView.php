@@ -85,7 +85,19 @@
                 </div>
             </div> 
         </div> 
-        <?php }?>      
+        <?php } else {?>      
+        <div class="projects_box">
+            <div class="more_box">
+                <a href="<?php echo base_url($this->lang->line('lang').'projects') ?>" class="button">TÜM İŞLER</a>
+            </div>
+
+            <div class="logo_box">
+                <div>
+                    <div class="logo"></div>
+                </div>
+            </div> 
+        </div>
+        <?php }?>
     </div>
     
 
