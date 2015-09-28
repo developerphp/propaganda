@@ -7,6 +7,53 @@ $c_grey: #cbc9c9;
 $c_darkGrey: #4b4c4b;
 $c_footer: #2c2c2c;
 
+/*fancybox*/
+.fancybox-overlay{
+	z-index: 999 !important;
+	background: #000 !important;	
+}
+.fancybox-close{
+	top: 18px !important;
+	right: 18px !important;
+	left: auto !important;
+	width: 36px !important;
+	height: 36px !important;
+	z-index: 8090;
+}
+.fancybox-type-iframe{
+	width: 80% !important;
+	height: 80% !important;
+	top: 10% !important;
+	left: 10% !important;		
+}
+.fancybox-skin{
+	width: 100% !important;
+	height: 100% !important;
+}
+.fancybox-outer, .fancybox-inner{
+	width: 100% !important;
+	height: 100% !important;
+}
+@media screen and (max-width: 768px){
+	.fancybox-type-iframe{
+		width: 80% !important;
+		height: 50% !important;
+		top: 25% !important;
+		left: 10% !important;
+		position: fixed !important;
+	}
+	.fancybox-wrap {
+		position: fixed !important;
+		top: 15% !important;
+	}
+	.fancybox-close {
+		z-index: 8090;
+		position: fixed !important;
+	}
+
+}
+/*fancybox*/
+
 html{
 	height: 100%;
 }
@@ -43,7 +90,7 @@ a:active{
 	background: $c_pink;
 	padding: 20px 30px 20px 30px;
 	cursor: pointer;
-	z-index: 999999;
+	z-index: 998;
 	color: #fff;
 	font-size: 28px;
 	.menu_icon{
@@ -71,7 +118,7 @@ a:active{
 	width: 80px;
 	height: 80px;
 	cursor: pointer;
-	z-index: 999999;
+	z-index: 998;
 	background-image: url(../img/menu_close.png);
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -88,7 +135,7 @@ a:active{
     padding-top: 120px;
     background: $c_footer;
     position: fixed;
-    z-index: 999;
+    z-index: 997;
     overflow-y: auto; 
     .logo{
     	background: url(../img/menu_logo.png) no-repeat;
@@ -123,11 +170,31 @@ a:active{
 		margin: 35px auto;
 		text-align: right;
 		a{
+			display: inline-block;
 	    	margin-left: 20px;
-	    	img{
-	    		width: 25px;
-	    	}
+	    	width: 30px;
+    		height: 30px;
+	    	background-position: center;
+	    	background-repeat: no-repeat;
 	    }
+	}
+	#menu1{
+		background-image: url(../img/social/menu1.png);
+		&:hover{
+			background-image: url(../img/social/menu1p.png);
+		}
+	}
+	#menu2{
+		background-image: url(../img/social/menu2.png);
+		&:hover{
+			background-image: url(../img/social/menu2p.png);
+		}
+	}
+	#menu3{
+		background-image: url(../img/social/menu3.png);
+		&:hover{
+			background-image: url(../img/social/menu3p.png);
+		}
 	}
 	.copyright{
 		width: 60%;
@@ -144,7 +211,7 @@ a:active{
 	height: 40px;
 	background: $c_grey;
 	position: fixed;
-	z-index: 99999;
+	z-index: 990;
 }
 
 .fixed_bottom{
@@ -153,7 +220,7 @@ a:active{
 	height: 40px;
 	background: $c_grey;
 	position: fixed;
-	z-index: 99999;
+	z-index: 990;
 }
 
 .page_bottom{
@@ -301,9 +368,9 @@ a:active{
 		}
 		.prev_next{
 			display: inline-block;
-			margin: -3px;
-			width: 50%;
-			height: 300px;
+			margin: -2.1px;
+			width: 100%;
+			height: 240px;
 			font-size: 24px;
 			color: #fff;
 			position: relative;
@@ -350,17 +417,6 @@ a:active{
 				background: rgba(0,0,0,0.4);
 				transition: all ease 0.5s;
 			}
-			&:hover{
-				.text{
-					bottom: 90px;
-					transition: all ease 0.5s;
-				}
-				.icon{
-					opacity: 1;
-					top: 100px;
-					transition: all ease 0.5s;
-				}
-			}
 		}
 		.more_box{
 			width: 50%;
@@ -377,7 +433,7 @@ a:active{
 			    border-right-color: $c_grey;
 			    text-align: center;
 			    width: 100%;
-			    padding: 6px 0;
+			    padding: 15px 0;
 			    &:hover{
 					color: #fff;
 					background: $c_pink;;
@@ -418,7 +474,7 @@ a:active{
 	margin-bottom: 40px;
 	letter-spacing: 1px;
 	.home_video{
-		height: 800px;
+		height: auto;
 		position: relative;
 		.logo{
 			position: absolute;
@@ -934,6 +990,14 @@ a:active{
 .works_row_mini{
 	width: 50% !important;
 	height: 25% !important;
+	.square{
+		position: relative;
+		.button{
+			position: absolute;
+			bottom: 30px;
+			left: 30px;
+		}
+	}
 	.pink{
 		.txt{
 			.alt_title{
@@ -1365,6 +1429,9 @@ a:active{
 	.works_row{
 		height: 70% !important;
 	}
+	.prev_next{
+		height: 220px !important;
+	}
 }
 @media (min-width: 1101px) and (max-width: 1366px) {
 	.menu{
@@ -1474,6 +1541,10 @@ a:active{
 		}
 		.square{
 			border-top: 1px solid #565656;
+			.button{
+				bottom: 80px;
+				left: 50px;
+			}
 		}
 		.pink{
 			background: $c_darkGrey;
@@ -1605,6 +1676,9 @@ a:active{
 		.fancybox{
 			width: 100%;
 			height: auto;
+			&:after{
+				display: none;
+			}
 		}
 	}
 }
@@ -1645,6 +1719,7 @@ a:active{
 		.boxes{
 			width: 100%;
 			.txt{
+
 				.button{
 					display: none;
 				}
@@ -1653,6 +1728,9 @@ a:active{
 		.square{
 			height: 50%;
 			border-top: 0px;
+			.txt{
+				padding-top: 80px !important;
+			}
 		}
 	}
 	.blurit{
@@ -1804,14 +1882,25 @@ a:active{
 }
 
 /*menu_fix*/
+@media screen and (min-height: 601px) and (max-height: 768px) {
+	.menu{
+		padding-top: 40px;
+		.item{
+    		font-size: 30px;
+		}
+	} 
+}
 @media screen and (max-height: 600px){
 	.menu{
 		.logo{
-			margin-bottom: 20px;
+			margin-bottom: 15px;
 		}
 		.item{
 			margin: 5px auto;
-    		font-size: 30px;
+    		font-size: 20px;
+		}
+		.social {
+   			margin: 15px auto;
 		}
 	}
 }
@@ -1837,33 +1926,10 @@ a:active{
 	}
 }
 
-/*fancybox*/
-.fancybox-overlay{
-	z-index: 999999;
-	background: #000;
-	.fancybox-close{
-		top: 18px !important;
-	    right: 18px !important;
-	    left: auto !important;
-	    width: 36px !important;
-	    height: 36px !important;
-	}
-	.fancybox-skin{
-		background: none;
-	}
-	.fancybox-type-iframe{
-		width: 80% !important;
-	    height: 80% !important;
-	    top: 10% !important;
-	    left: 10% !important;
-	   .fancybox-skin{
-			width: 100% !important;
-	    	height: 100% !important;
-		}
-		.fancybox-outer, .fancybox-inner{
-			width: 100% !important;
-	    	height: 100% !important;
-		}
-	}	
-}
+
+
+
+
+
+
 

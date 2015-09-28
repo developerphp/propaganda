@@ -9,7 +9,7 @@
     <div class="fixed_bottom"></div>
 
     <div class="fixed_box">
-        <div class="bg" style="background-image: url('<?php echo base_url(); ?>assets/img/biz<?php echo rand(1,4) ?>.jpg');">
+        <div class="bg" style="background-image: url('<?php echo base_url(); ?>assets/img/banners/p<?php echo rand(1,43) ?>.jpg');">
         </div>
     </div>
     

@@ -52,7 +52,7 @@
         </div>
         <?php 
         $sql=$this->db->query("select 
-                projects.title,projects.id,projects.image,projects.project_year,projects.publish,projects.reorder,projects.subbrand,
+                projects.title,projects.id,projects.image,projects.cover_image,projects.project_year,projects.publish,projects.reorder,projects.subbrand,
                 customers.id as cid,customers.title as customer_name,customers.image_gray
              from projects,customers where customers.id=projects.customer and projects.publish=1 and projects.customer=".$project['customer']." and projects.id<>".$project['id']." order by projects.reorder desc");
         if ($sql->num_rows()>0) {
@@ -66,7 +66,7 @@
             foreach($sql->result() as $p) {
             ?>
             <a href="<?php echo base_url($this->lang->line('lang').'projects/detail/'.$p->id) ?>">
-            <div class="prev_next" style="background-image: url(<?php echo base_url('uploads/thumb_'.$p->image) ?>);">            
+            <div class="prev_next" style="background-image: url(<?php echo base_url('uploads/thumb_'.$p->cover_image) ?>);">            
                 <div class="icon"></div>
                 <div class="text">
                     <span><?php echo $p->project_year.' '.$p->customer_name ?></span>

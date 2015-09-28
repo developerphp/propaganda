@@ -10,7 +10,7 @@
     <div class="fixed_bottom"></div>
     
     <div class="fixed_box">
-        <div class="bg" style="background-image: url(<?php echo base_url() ?>assets/img/brands_cover.jpg)";>
+        <div class="bg" style="background-image: url('<?php echo base_url(); ?>assets/img/banners/p<?php echo rand(1,43) ?>.jpg');">
         </div>
     </div>
     
@@ -23,9 +23,9 @@
                 $sql=$this->db->query("select * from customers where publish=1 order by reorder desc");
                 foreach($sql->result() as $customer) {
                 ?>
-                <div class="member">
+                <a class="member" href="">
                     <img src="<?php echo base_url('uploads/'.$customer->image_gray); ?>" alt="logo">
-                </div>
+                </a>
                 <?php }?>
             </div>
         <div class="footer detail">
