@@ -1916,7 +1916,7 @@ a:active {
     padding-top: 0px;
   }
   .works_row .square .bg {
-    height: 400px;
+    height: 700px;
   }
   .works_row .square .txt .year {
     font-size: 22px;
@@ -2005,6 +2005,9 @@ a:active {
   .home_box .home_video video {
     display: none;
   }
+  .home_box .home_video .logo:hover {
+    bottom: 50px;
+  }
   .home_box .project_boxes .box {
     width: 100%;
   }
@@ -2079,6 +2082,9 @@ a:active {
     height: 62px;
     background-size: 27px 27px;
     -webkit-background-size: 27px 27px;
+  }
+  .works_row .square .bg {
+    height: 300px;
   }
   .works_row_mini {
     height: 50% !important;
@@ -2158,10 +2164,10 @@ a:active {
     margin: 10px;
   }
   .fixed_box {
-    height: 400px;
+    height: 300px;
   }
   .right_box .boxes .txt {
-    padding-top: 50px;
+    padding-top: 10px;
     width: 70%;
   }
   .right_box .boxes .txt .year {
@@ -2201,7 +2207,7 @@ a:active {
 }
 
 /*menu_fix*/
-@media screen and (min-height: 601px) and (max-height: 768px) {
+@media screen and (min-height: 561px) and (max-height: 768px) {
   .menu {
     padding-top: 40px;
   }
@@ -2210,7 +2216,10 @@ a:active {
   }
 }
 
-@media screen and (max-height: 600px) {
+@media screen and (max-height: 560px) {
+  .menu {
+    padding-top: 70px;
+  }
   .menu .logo {
     margin-bottom: 15px;
   }
@@ -2223,7 +2232,7 @@ a:active {
   }
 }
 
-@media screen and (max-height: 320px) {
+@media screen and (max-height: 450px) {
   .menu {
     padding-top: 15px;
   }

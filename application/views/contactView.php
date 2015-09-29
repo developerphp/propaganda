@@ -46,7 +46,7 @@
     <div class="fixed_bottom"></div>
     
     <div class="fixed_box">
-        <div class="bg" style="background-image: url(<?php echo base_url() ?>assets/img/contact.jpg);">
+        <div class="bg" style="background-image: url('<?php echo base_url(); ?>assets/img/banners/p<?php echo rand(1,43) ?>.jpg');">
         </div>
     </div>
     
