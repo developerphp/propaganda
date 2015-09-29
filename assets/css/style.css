@@ -1850,7 +1850,10 @@ a:active {
     height: 60% !important;
   }
   .team_box .members .member {
-    height: 140px;
+    width: calc(33.333% - 10px);
+  }
+  .brands_box .members .member {
+    width: calc(33.333% - 40px);
   }
 }
 
@@ -1967,10 +1970,7 @@ a:active {
     display: none;
   }
   .team_box .members .member {
-    width: calc(50% - 10px);
-    width: -webkit-calc(50% - 10px);
-    width: -moz-calc(50% - 10px);
-    height: 500px;
+    height: 400px;
   }
   .team_box .members .member .name {
     opacity: 1;
@@ -2151,11 +2151,11 @@ a:active {
   }
   .team_box .members .member {
     height: 200px;
+    width: calc(50% - 10px);
   }
   .brands_box .members .member {
-    width: calc(50% - 40px);
-    width: -webkit-calc(50% - 40px);
-    width: -moz-calc(50% - 40px);
+    width: calc(33.333% - 20px);
+    margin: 10px;
   }
   .fixed_box {
     height: 400px;
