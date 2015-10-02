@@ -20,6 +20,13 @@
             <div class="logo"></div>
             <div class="members">
                 <?php 
+<<<<<<< HEAD
+=======
+     //            $sql=$this->db->query("select 
+     //    projects.title,projects.id as pid,projects.customer,
+     //    customers.id as cid,customers.title as customer_name,customers.image_gray as logo , customers.reorder
+     // from projects,customers where customers.id=projects.customer and customers.publish=1  group by projects.customer order by customers.reorder desc");
+>>>>>>> origin/master
                 $sql=$this->db->query("select * from customers where publish=1 order by reorder desc");
                 foreach($sql->result() as $customer) {
                 ?>
