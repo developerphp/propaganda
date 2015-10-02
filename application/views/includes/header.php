@@ -10,7 +10,7 @@
     <div class="item"><a href="<?php echo base_url($this->lang->line('lang').'contact') ?>">İLETİŞİM</a></div>
     <div class="social">
     	<a target="_blank" href="https://twitter.com/ajanspropaganda" id="menu1"></a>
-    	<a target="_blank" href="https://twitter.com/ajanspropaganda" id="menu2"></a>
+    	<!--<a target="_blank" href="https://twitter.com/ajanspropaganda" id="menu2"></a>-->
     	<a target="_blank" href="https://vimeo.com/ajanspropaganda" id="menu3"></a>
     </div>
     <div class="copyright">@2015 PROPAGANDA</div>

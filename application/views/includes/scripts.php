@@ -81,6 +81,19 @@
 					buttons : {}
 			}
 		});
+
     });
 	
 </script>
+
+<script type="text/javascript">
+var version = navigator.appVersion;
+alert(version);
+
+</script>
+
+
+
+
+
+

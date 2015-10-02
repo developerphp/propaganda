@@ -68,15 +68,15 @@
                     NO.311 KAT 6<br>
                     BEYOĞLU 34100<br>
                     İSTANBUL<br><br>
-                    <span class="grey_txt">TEL:</span> <a href="tel:902122526500">+90<br> 212 252 6500</a><br><br>
-                    <span class="grey_txt">FAX:</span> <a href="tel:902122521666">+90<br> 212 252 1666</a>
+                    <span class="grey_txt">TEL:</span> <a href="tel:+902122526500">+90<br> 212 252 6500</a><br><br>
+                    <span class="grey_txt">FAX:</span>+90<br> 212 252 1666
                  </div>
                  <a class="email" href="mailto:merhaba@propaganda.com.tr">MERHABA@<span class="grey_txt">PROPAGANDA.COM.TR</span></a>
             </div>
             <div class="about_us">
                 <div class="box">
                     <div class="title">BİZ</div>
-                    PROPAGANDAYI GÖRMEK İÇİN BUTONA BASIN!
+                    PROPAGANDA'YI GÖRMEK İÇİN BUTONA BASIN!
                     <a href="<?php echo base_url($this->lang->line('lang').'team') ?>" class="email">DAHA FAZLA</a>
                 </div>
             </div> 

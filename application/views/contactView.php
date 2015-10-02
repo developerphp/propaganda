@@ -73,8 +73,8 @@
                         İSTANBUL<br><br>
                     </div>
                     <div class="r_right">
-                        <span class="grey_txt">TEL:</span> <a href="tel:902122526500">+90<br> 212 252 6500</a><br><br>
-                        <span class="grey_txt">FAX:</span> <a href="tel:902122521666">+90<br> 212 252 1666</a>
+                        <span class="grey_txt">TEL:</span> <a href="tel:+902122526500">+90<br> 212 252 6500</a><br><br>
+                        <span class="grey_txt">FAX:</span>+90<br> 212 252 1666
                     </div>
                 </div>
             </div> 
