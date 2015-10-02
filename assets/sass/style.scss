@@ -32,7 +32,11 @@ $c_footer: #2c2c2c;
 }
 .fancybox-outer, .fancybox-inner{
 	width: 100% !important;
-	height: 100% !important;
+}
+.fancybox-type-iframe{
+	.fancybox-outer, .fancybox-inner{
+		height: 100% !important;
+	}
 }
 @media screen and (max-width: 768px){
 	.fancybox-type-iframe{

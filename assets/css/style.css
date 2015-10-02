@@ -291,6 +291,9 @@ ul {
 
 .fancybox-outer, .fancybox-inner {
   width: 100% !important;
+}
+
+.fancybox-type-iframe .fancybox-outer, .fancybox-type-iframe .fancybox-inner {
   height: 100% !important;
 }
 
