@@ -1,6 +1,6 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 $route['default_controller'] = "home";
-$route['404_override'] = '';
+$route['404_override'] = 'c_error';
 
 // URI like '/en/about' -> use controller 'about'
 $route['^tr/(.+)$'] = "$1";

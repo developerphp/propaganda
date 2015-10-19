@@ -1824,6 +1824,27 @@ a:active {
   width: 100%;
 }
 
+.fourofour {
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.fourofour a {
+  position: absolute;
+  width: 657px;
+  height: 367px;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.fourofour a img {
+  width: 100%;
+}
+
 @media screen and (max-width: 1510px) {
   .home_box .home_video {
     height: auto;
@@ -2056,6 +2077,10 @@ a:active {
 }
 
 @media screen and (max-width: 767px) {
+  .fourofour a {
+    width: 280px;
+    height: 160px;
+  }
   .menu {
     padding-top: 60px;
   }

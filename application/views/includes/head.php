@@ -7,6 +7,8 @@
 
 <title>PROPAGANDA</title>
 
+<link rel="icon" type="image/png" href="<?php echo base_url() ?>assets/img/favicon.png">
+
 <link href="<?php echo base_url() ?>assets/css/bootstrap.css" type="text/css" rel="stylesheet">
 <link href="<?php echo base_url() ?>assets/css/jquery.fancybox.css" type="text/css" rel="stylesheet">
 <link href="<?php echo base_url() ?>assets/css/style.css" type="text/css" rel="stylesheet">
