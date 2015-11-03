@@ -34,10 +34,10 @@
         <div class="footer detail">
             <div class="right">
                 <div class="r_left">
-                    İSTİKLAL CAD.<br>
-                    <span class="grey_txt">MISIR APT.</span><br>
-                    NO.311 KAT 6<br>
-                    BEYOĞLU 34100<br>
+                    ŞAHKULU MAH. İLK BELEDİYE CAD.<br>
+                    <span class="grey_txt">VURAL ARIKAN APT.</span><br>
+                    NO 5 DAİRE 4-5<br>
+                    ŞİŞHANE BEYOĞLU<br>
                     İSTANBUL<br><br>
                     <span class="grey_txt">TEL:</span> <a href="tel:+902122526500">+90<br> 212 252 6500</a><br><br>
                     <span class="grey_txt">FAX:</span>+90<br> 212 252 1666

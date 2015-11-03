@@ -11,10 +11,10 @@
                 // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
                 var mapOptions = {
                     // How zoomed in you want the map to start at (always required)
-                    zoom: 15,
+                    zoom: 17,
                     scrollwheel: false,
                     // The latitude and longitude to center the map (always required)
-                    center: new google.maps.LatLng(41.032523, 28.976629), // New York
+                    center: new google.maps.LatLng(41.027877, 28.973877), // New York
 
                     // How you would like to style the map. 
                     // This is where you would paste any style found on Snazzy Maps.
@@ -30,7 +30,7 @@
 
                 // Let's also add a marker while we're at it
                 var marker = new google.maps.Marker({
-                    position: new google.maps.LatLng(41.032523, 28.976629),
+                    position: new google.maps.LatLng(41.027877, 28.973877),
                     map: map,
                     title: 'propaganda'
                 });
@@ -66,10 +66,10 @@
                     <div class="r_left">
                         <div class="line"></div>
                         <span class="grey_txt title">BİZE ULAŞIN</span>
-                        İSTİKLAL CAD.<br>
-                        <span class="grey_txt">MISIR APT.</span><br>
-                        NO.311 KAT 6<br>
-                        BEYOĞLU 34100<br>
+                        ŞAHKULU MAH. İLK BELEDİYE CAD.<br>
+                        <span class="grey_txt">VURAL ARIKAN APT.</span><br>
+                        NO 5 DAİRE 4-5<br>
+                        ŞİŞHANE BEYOĞLU<br>
                         İSTANBUL<br><br>
                     </div>
                     <div class="r_right">
